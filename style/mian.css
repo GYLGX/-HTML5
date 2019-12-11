@@ -1,0 +1,404 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/* 模态框 -------------------------------------------*/
+.Modal-dialog {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 899;
+  background-color: #000;
+  opacity: 0.5;
+  display: none;
+}
+
+/* 提示框 */
+.prompt {
+  z-index: 999;
+  position: absolute;
+  left: 15%;
+  top: 30%;
+  background-color: #fff;
+  height: 25%;
+  width: 70%;
+  display: none;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.prompt h2 {
+  margin-top: 15%;
+  margin-bottom: 23%;
+}
+
+.determine {
+  text-align: center;
+  color: green;
+  font-size: 20px;
+  border-top: 1px solid #ccc;
+}
+
+/* -------------------------------------------------- */
+
+.tabsbox {
+  height: 100%;
+  width: 100%;
+}
+
+/* tab标签---------------------------------------- */
+footer {
+  width: 100%;
+  height: 7%;
+}
+
+.firstnav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style-type: none;
+  height: 100%;
+}
+
+.firstnav ul li {
+  margin: 0;
+  height: 100%;
+  width: 33.33%;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  background-color: rgb(103, 181, 227);
+}
+
+.firstnav ul li span {
+  color: #fff;
+  font-family: "宋体";
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.firstnav ul li:nth-child(2) {
+  border-right: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+}
+
+.liactive {
+  border-top: none !important;
+  background-color: rgb(32, 143, 248) !important;
+  /* tab标签---------------------------------------- */
+}
+
+
+/* 内容页面 */
+.tabscon {
+  height: 93%;
+  width: 100%;
+}
+
+.The_title {
+  background-color: rgb(103, 181, 227);
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  font-family: "宋体";
+  text-align: center;
+  font-size: 25px;
+  z-index: 800;
+}
+
+/* 页面大小 */
+section {
+  height: 100%;
+  display: none;
+}
+
+/* 隐藏页面 */
+.sonaction {
+  display: block;
+}
+
+
+/* 界面一 --------------------------------------------------------- */
+/* 列表 */
+.lists {
+  overflow: scroll;
+  height: 93%;
+}
+
+.list {
+  /* background-color: aqua; */
+  height: 100px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  /* border: 2px solid #ccc; */
+
+}
+
+.list span H3 {
+  background-color: none;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+/* 头像 */
+.Head-portrait {
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+  margin: 10px;
+}
+
+/* .name {
+  margin-bottom: 10px;
+} */
+
+/* 时间框 */
+.time {
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* 时间图标 */
+.timeIco {
+  height: 16px;
+  width: 16px;
+  margin-left: 100px;
+  margin-bottom: -3px;
+}
+
+/* 内容框---------------------------------------------- */
+.Details-page {
+  background: #fff;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  height: 40%;
+  width: 70%;
+  border-radius: 20px;
+  padding: 5px;
+  display: none;
+  z-index: 999;
+}
+
+.In-the {
+  height: 90%;
+}
+
+
+/* 标题 */
+.details-title {
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5px;
+}
+
+/* 头像和昵称 */
+.gether {
+  display: flex;
+  margin-left: 10px;
+}
+
+.details-img {
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+}
+
+.details-name {
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+/* 内容 */
+.detail-content {
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  height: 100px;
+}
+
+/* 图标和时间 */
+.detail-timeIco {
+  height: 15px;
+  width: 15px;
+  margin-bottom: -3px;
+  margin-left: 10px;
+}
+
+.detail-time {
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* 界面二 --------------------------------------------------------- */
+.write {
+  text-align: center;
+}
+
+.write p {
+  font-size: 20px;
+}
+
+.write input {
+  height: 25px;
+  width: 70%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-size: 20px;
+  outline: none;
+}
+
+/* 输入内容框 */
+#text {
+  width: 70%;
+  height: 100px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 20px;
+  border: 2px solid #ccc;
+  outline: none;
+}
+
+/* 提交按钮 */
+#btnclick {
+  height: 50px;
+  width: 70%;
+  border-radius: 20px;
+  color: #000;
+  font-size: 25px;
+  font-weight: 600;
+  position: absolute;
+  bottom: 70px;
+  left: 58px;
+  outline: none;
+}
+
+/* 界面三 */
+.instrument {
+  height: 100%;
+  background-size: 100% 100%;
+  text-align: center;
+}
+
+.site {
+  /* padding-top: 30px; */
+  margin-bottom: 20px;
+  color: #444;
+  font-family: "宋体";
+  font-size: 30px;
+}
+
+.pm25 {
+  display: flex;
+  width: 25%;
+  margin-left: 39%;
+}
+
+.weather {
+  display: flex;
+}
+
+.weather li {
+  text-align: center;
+  list-style: none;
+  padding-top: 10px;
+  width: 25%;
+}
+
+
+.weather-img {
+  margin: 10px;
+  height: 60px;
+  width: 60px;
+}
+
+.bagtemperature {
+  color: #fff;
+  font-size: 50px;
+  margin-left: -30%;
+  box-shadow: 0 10px 100px #fff;
+}
+
+.date {
+  margin-top: 55%;
+  font-size: 30px;
+  margin-left: -55%;
+  margin-bottom: -6px;
+  color: #555;
+  font-family: serif;
+  font-weight: bolder;
+}
+
+.temperature {
+  color: #fff;
+}
+
+.positioning {
+  margin-top: 10px;
+  margin-bottom: -5px;
+  height: 25px;
+  width: 25px;
+}
+
+.search {
+  position: absolute;
+  top: 45px;
+  left: 2px;
+  height: 28px;
+  width: 28px;
+}
+
+#search_frame {
+  position: absolute;
+  top: 43px;
+  left: 40px;
+  height: 33px;
+  width: 89%;
+  background-color: #ccc;
+  border-radius: 10px;
+  padding: 0;
+  display: flex;
+}
+
+.positioningico {
+  height: 25px;
+  width: 25px;
+  margin-top: 4px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.searchInput {
+  height: 25px;
+  border: none;
+  outline: none;
+  width: 70%;
+  border-radius: 3px;
+  padding-left: 10px;
+  margin-top: 4px;
+  font-size: 16px;
+}
+
+.searchBtn {
+  height: 30px;
+  border: none;
+  outline: none;
+  background: none;
+  color: green;
+  font-size: 15px;
+  padding-left: 10px;
+  line-height: 30px;
+}
