@@ -258,6 +258,7 @@ section {
   padding-left: 10px;
   font-size: 20px;
   outline: none;
+  border: 2px solid aqua;
 }
 
 /* 输入内容框 */
@@ -268,7 +269,7 @@ section {
   border-radius: 10px;
   padding: 10px;
   font-size: 20px;
-  border: 2px solid #ccc;
+  border: 2px solid aqua;
   outline: none;
 }
 
@@ -277,17 +278,19 @@ section {
   height: 50px;
   width: 70%;
   border-radius: 20px;
-  color: #000;
+  color: #FFFFFF;
+  font-family: "宋体";
   font-size: 25px;
   font-weight: 600;
   position: absolute;
   bottom: 70px;
   left: 58px;
   outline: none;
+  background-color: rgb(131, 196, 236);
 }
 
 /* 界面三 */
-.instrument {
+#weatherpage {
   height: 100%;
   background-size: 100% 100%;
   text-align: center;
@@ -401,4 +404,10 @@ section {
   font-size: 15px;
   padding-left: 10px;
   line-height: 30px;
+}
+
+.tabscon {
+  background-image: url(../images/z.gif);
+  background-repeat: no-repeat;
+  background-position: 70% 100%;/
 }
