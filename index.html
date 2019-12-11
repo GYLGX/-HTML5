@@ -53,6 +53,20 @@
   <div>
     <!-- 遮蔽框 -->
     <div class="Modal-dialog"></div>
+    <!-- 警告框 -->
+    <div class="loghint">&nbsp;改我密码干嘛！<br />密码去看源码</div>
+    <!-- 登录弹框 -->
+    <div id="log">
+      <h3 class="log_title">登录</h3>
+      <label for="uname">用户名：
+        <input id="uname" value="root" type="text">
+      </label>
+      <br>
+      <label for="logpassword">密&nbsp码：
+        <input id="logpassword" value="123456" maxlength="6" type="password">
+      </label>
+      <button id="logbtn">登录</button>
+    </div>
     <!-- 提示框 -->
     <div class="prompt">
       <h2>请全部输入内容！</h2>
@@ -64,6 +78,8 @@
       <div class="determine">确定</div>
     </div>
   </div>
+  <!-- 个人 -->
+  <img id="userimg" src="./images/个人.png" alt="">
   <!-- 界面 -->
   <div class="tabsbox" id='tab'>
     <!-- 内容显示框 -->

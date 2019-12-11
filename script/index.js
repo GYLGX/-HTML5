@@ -1,3 +1,4 @@
+// tab栏切换
 var that;
 class Tab {
   constructor(id) {
@@ -33,20 +34,41 @@ new Tab('#tab')
 
 // 列表请求
 $(function () {
+  // 登录界面
+  $('#userimg').click(() => {
+    $('.Modal-dialog').show();
+    $('#log').show();
+    $('.loghint').show();
+    $('#logbtn').click(() => {
+      let $value = $('#logpassword').val();
+      if ($value === '123456') {
+        $('.Modal-dialog').hide();
+        $('#log').hide();
+        $('.loghint').hide();
+      } else {
+        $('.loghint').animate({
+          top: "120px"
+        });
+        setTimeout(() => {
+          $('.loghint').animate({
+            top: "200px"
+          });
+        }, 3000);
+      }
+    })
+  })
+
   $.ajax({
       url: 'http://127.0.0.1:5000/get_all_msg',
       dataType: 'json',
       success: function (data) {
-        console.log(data);
         for (let value of data) {
-          console.log(value);
           let $cloneli = $('.list').first().clone();
           $cloneli.find('.Head-portrait').attr('src', value.avatar);
           $cloneli.find('.liName').html(value.title);
           $cloneli.find('.time').html(value.time);
           $cloneli.appendTo('.lists ul')
           $cloneli.click(function () {
-            console.log(value.detail);
             let $clonedetails = $('.details').first().clone();
             $clonedetails.find('.details-img').attr('src', value.avatar);
             $clonedetails.find('.details-title').html(value.title);
@@ -61,9 +83,8 @@ $(function () {
       }
     }),
     // 提交按钮
-    $('#btnclick').click(function () {
+    $('#btnclick').click(() => {
       if ($('#nickname').val() != '' && $('#title').val() != '' && $('#text').val() != '' && $('#img ').val() != '') {
-        console.log('全部有值');
         // 发送请求
         $.ajax({
           url: 'http://127.0.0.1:5000/add_msg',
@@ -73,9 +94,7 @@ $(function () {
             detail: $('#text').val(),
             avatar: $('#img ').val()
           },
-          success(data) {
-            console.log(data);
-          }
+          success(data) {}
         })
       } else {
         $('.Modal-dialog').show();
@@ -96,12 +115,6 @@ $(function () {
     url: 'https://api.asilu.com/weather/',
     data: {
       city: '广州'
-      /*
-      霾:沈阳
-      阵雪:长春 吉林
-      多云转小雪:牡丹江
-      七台河 :小雪转晴 阵雪
-      */
     },
     dataType: 'jsonp',
     success(data) {
@@ -124,12 +137,9 @@ $(function () {
         $cloneweatherli.find('.weather-img').attr('src', './' + value.icon2 + '.png'); //状态图
         $cloneweatherli.find('.temperature').html(value.temp); //温度
         $cloneweatherli.appendTo('.weather')
-        console.log(value.icon2);
 
       }
       $('.weather .day').first().html('今天');
-      console.log($('.weather .day'));
-
     }
   })
 
