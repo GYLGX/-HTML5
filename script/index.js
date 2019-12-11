@@ -89,11 +89,8 @@ $(function () {
     $('.In-the').empty();
     $('.prompt').hide();
   })
-  // })
 
-
-
-  // $(function () {
+  //小工具请求
   $("#search_frame").hide();
   $.ajax({
     url: 'https://api.asilu.com/weather/',
